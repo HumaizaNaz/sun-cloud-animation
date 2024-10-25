@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87CEFA, #FFF); 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sun {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 165, 0, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: -15px;
+    animation: sun 8s linear infinite; 
+}
+
+.cloud {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.cloud1 {
+    top: 20px;
+    left: -10px;
+    animation: cloud1 12s ease-in-out infinite;
+}
+
+.cloud2 {
+    top: 40px;
+    left: 500px;
+    animation: cloud2 10s ease-in infinite;
+    animation-delay: 2.5s;
+}
+
+.cloud3 {
+    top: 50px;
+    right: -10px;
+    animation: cloud3 10s ease-out infinite;
+}
+
+@keyframes cloud1 {
+    0% {
+        left: -10px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        left: 500px;
+    }
+    100% {
+        left: -200px;
+    }
+}
+
+@keyframes cloud3 {
+    0% {
+        right: -10px;
+    }
+    100% {
+        right: 110%;
+    }
+}
+
+@keyframes sun {
+    0% {
+        top: 50px;
+        left: -15px;
+        background-color: rgba(255, 165, 0, 0.6);
+    }
+    50% {
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 165, 0, 1);
+    }
+    100% {
+        top: 50px;
+        left: 110%;
+        background-color: rgba(255, 165, 0, 0.6);
+    }
+}
